@@ -1,0 +1,12 @@
+<div id="possible_sets">
+  <div id="possible_sets_title" class="div_title"><%= "Sets possibles : #{@game.get_sets.size}" -%></div>
+  <% @game.get_sets.each_with_index do |set, index| -%>
+    <div id="<%= "possible_set_#{index}" -%>" class="possible_set" onclick="<%= "select_possible_set('#{@game.id}', #{index});"-%>">
+      <% Game::NB_ETAT.times do |e| -%>
+        <% card_id = Game::CARDS[@game.talon[@game.tapis[set[e]]]].join('') -%>
+        <div id="possible_set_card_<%= e -%>" class="<%= "card_#{card_id}" -%>"></div>
+      <% end -%>
+    </div>
+  <% end -%>
+  <div class="spacer">&nbsp;</div>
+</div>

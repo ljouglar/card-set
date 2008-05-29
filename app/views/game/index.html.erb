@@ -1,0 +1,16 @@
+<%= link_to "Nouvelle partie", {:action => "create", :method => "post"} -%>
+<table border="1">
+  <tr>
+    <th>Tapis</th><th>Courante</th>
+  </tr>
+  <% @games.each do |game| -%>
+  <tr>
+    <td><%= game.tapis.map{|c|game.talon[c]}.inspect -%></td><td><%= game.courante.to_s -%></td>
+    <td><%= link_to "Suppr", {:action => "remove", :id => game.id}, :method => "post" -%></td>
+    <td><%= link_to "Afficher", {:action => "show", :id => game.id} -%></td>
+  </tr>
+  <% end -%>
+</table>
+<% Game::CARDS.each do |card| -%>
+  <%= image_tag "card_#{card.join('')}.png", :style => "display: none" -%>
+<% end -%>

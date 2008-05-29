@@ -1,0 +1,124 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+#content {
+  width: 900px;
+  text-align: center;
+  /* background-color: #bbb; */
+}
+
+#tapis {
+  float: left;
+  width: 400px;
+  /* background-color: #bfb; */
+}
+
+#selected_cards {
+  display: block;
+  width: 400px;
+  /* background-color: #bbf; */
+}
+#possible_sets {
+  float: right;
+  width: 200px;
+  /* background-color: #fbb; */
+}
+
+.spacer {
+  clear: both;
+}
+
+.div_title {
+  width: 100%;
+}
+
+#possible_set  {float: left; width: 200px; height: 96px;}
+
+.card_none {float: left; width: 66px; height: 98px;}
+.card_0000 {background:URL('../images/card_0000.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0001 {background:URL('../images/card_0001.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0002 {background:URL('../images/card_0002.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0010 {background:URL('../images/card_0010.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0011 {background:URL('../images/card_0011.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0012 {background:URL('../images/card_0012.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0020 {background:URL('../images/card_0020.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0021 {background:URL('../images/card_0021.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0022 {background:URL('../images/card_0022.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0100 {background:URL('../images/card_0100.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0101 {background:URL('../images/card_0101.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0102 {background:URL('../images/card_0102.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0110 {background:URL('../images/card_0110.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0111 {background:URL('../images/card_0111.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0112 {background:URL('../images/card_0112.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0120 {background:URL('../images/card_0120.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0121 {background:URL('../images/card_0121.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0122 {background:URL('../images/card_0122.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0200 {background:URL('../images/card_0200.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0201 {background:URL('../images/card_0201.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0202 {background:URL('../images/card_0202.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0210 {background:URL('../images/card_0210.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0211 {background:URL('../images/card_0211.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0212 {background:URL('../images/card_0212.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0220 {background:URL('../images/card_0220.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0221 {background:URL('../images/card_0221.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_0222 {background:URL('../images/card_0222.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1000 {background:URL('../images/card_1000.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1001 {background:URL('../images/card_1001.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1002 {background:URL('../images/card_1002.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1010 {background:URL('../images/card_1010.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1011 {background:URL('../images/card_1011.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1012 {background:URL('../images/card_1012.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1020 {background:URL('../images/card_1020.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1021 {background:URL('../images/card_1021.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1022 {background:URL('../images/card_1022.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1100 {background:URL('../images/card_1100.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1101 {background:URL('../images/card_1101.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1102 {background:URL('../images/card_1102.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1110 {background:URL('../images/card_1110.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1111 {background:URL('../images/card_1111.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1112 {background:URL('../images/card_1112.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1120 {background:URL('../images/card_1120.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1121 {background:URL('../images/card_1121.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1122 {background:URL('../images/card_1122.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1200 {background:URL('../images/card_1200.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1201 {background:URL('../images/card_1201.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1202 {background:URL('../images/card_1202.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1210 {background:URL('../images/card_1210.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1211 {background:URL('../images/card_1211.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1212 {background:URL('../images/card_1212.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1220 {background:URL('../images/card_1220.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1221 {background:URL('../images/card_1221.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_1222 {background:URL('../images/card_1222.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2000 {background:URL('../images/card_2000.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2001 {background:URL('../images/card_2001.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2002 {background:URL('../images/card_2002.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2010 {background:URL('../images/card_2010.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2011 {background:URL('../images/card_2011.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2012 {background:URL('../images/card_2012.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2020 {background:URL('../images/card_2020.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2021 {background:URL('../images/card_2021.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2022 {background:URL('../images/card_2022.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2100 {background:URL('../images/card_2100.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2101 {background:URL('../images/card_2101.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2102 {background:URL('../images/card_2102.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2110 {background:URL('../images/card_2110.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2111 {background:URL('../images/card_2111.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2112 {background:URL('../images/card_2112.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2120 {background:URL('../images/card_2120.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2121 {background:URL('../images/card_2121.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2122 {background:URL('../images/card_2122.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2200 {background:URL('../images/card_2200.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2201 {background:URL('../images/card_2201.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2202 {background:URL('../images/card_2202.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2210 {background:URL('../images/card_2210.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2211 {background:URL('../images/card_2211.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2212 {background:URL('../images/card_2212.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2220 {background:URL('../images/card_2220.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2221 {background:URL('../images/card_2221.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}
+.card_2222 {background:URL('../images/card_2222.png') no-repeat center; float: left; width: 66px; height: 98px; cursor: pointer;}

@@ -1,0 +1,3 @@
+page[:tapis].replace_html :partial => 'tapis'
+page[:selected_cards].replace_html :partial => 'selected_cards'
+page[:possible_sets].replace_html :partial => 'possible_sets'

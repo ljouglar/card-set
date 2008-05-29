@@ -1,0 +1,17 @@
+<div id="tapis">
+  <div id="tapis_title" class="div_title"><%= "Tapis [courante: #{@game.courante}] [étendu: #{@game.etendu}]" -%></div>
+  <%= javascript_tag "
+    selected_cards = [];
+    possible_sets = #{@game.get_sets.inspect};
+    etendu = #{@game.etendu};" %>
+  <% Game::NB_ETAT.times do |e| -%>
+    <% (Game::NB_CARAC + 2).times do |c| -%>
+      <% place_number = c * Game::NB_ETAT + e -%>
+      <% card_id = @game.tapis[c * Game::NB_ETAT + e] ? Game::CARDS[@game.talon[@game.tapis[place_number]]].join('') : "none" -%>
+      <div id="<%= "tapis_card_#{place_number}" -%>" class="<%= "card_#{card_id}" -%>" 
+        onclick="<%= card_id != 'none' ? "select_tapis_card('#{@game.id}' , #{place_number})" : "" -%>">
+      </div>
+    <% end -%>
+  <% end -%>
+  <div class="spacer">&nbsp;</div>
+</div>
