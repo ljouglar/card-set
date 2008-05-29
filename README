@@ -1,4 +1,4 @@
-Card-game is the port of the famous SET game on a rails app.
+Card-set is the port of the famous SET card game on a rails app.
 
 Principles of the game :
   - there is a deck of 81 cards
