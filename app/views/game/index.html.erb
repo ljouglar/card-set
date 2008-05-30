@@ -2,7 +2,7 @@
 <br/>
 <table border="1" align="center">
   <tr>
-    <th>Tapis</th><th>Courante</th><th>Début</th><th>Dern. set</th><th>Sets</th><th>Ratés</th><th>Score</th>
+    <th>Tapis</th><th>Courante</th><th>Début</th><th>Dern. set</th><th>Sets</th><th>Ratés</th><th>Score</th><th>Moyenne</th>
   </tr>
   <% @games.each do |game| -%>
   <tr>
@@ -13,6 +13,7 @@
     <td><%= game.nb_set.to_s -%></td>
     <td><%= game.nb_bad_set.to_s -%></td>
     <td><%= game.nb_point.to_s -%></td>
+    <td><%= game.moy_set.to_s -%></td>
     <td><%= link_to "Suppr", {:action => "remove", :id => game.id}, :method => "post" -%></td>
     <td><%= link_to "Afficher", {:action => "show", :id => game.id} -%></td>
   </tr>

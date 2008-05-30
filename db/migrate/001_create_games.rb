@@ -10,6 +10,7 @@ class CreateGames < ActiveRecord::Migration
       t.integer   :nb_set       # Nombre de sets réalisés
       t.integer   :nb_bad_set   # Nombre de tentatives de set ratées
       t.integer   :nb_point     # Nombre de points cumulés
+      t.float     :moy_set      # Temps moyen pour trouver un set
       t.timestamps
     end
   end

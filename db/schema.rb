@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 1) do
     t.integer  "nb_set"
     t.integer  "nb_bad_set"
     t.integer  "nb_point"
+    t.float    "moy_set"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

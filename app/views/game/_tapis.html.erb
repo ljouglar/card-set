@@ -1,6 +1,7 @@
 <div id="tapis">
   <div id="tapis_title" class="div_title"><%= "Tapis [courante: #{@game.courante}] [étendu: #{@game.etendu}] [sets #{@game.nb_set}] [ratés #{@game.nb_bad_set}] [score #{@game.nb_point}]" -%></div>
   <div id="tapis_title" class="div_title"><%= "[début: #{@game.start.to_s(:db)}] [dernier set: #{@game.last_set ? @game.last_set.to_s(:db) : '&nbsp;'}]" -%></div>
+  <div id="tapis_title" class="div_title"><%= "[temps moyen pour trouver un set: #{@game.moy_set ? @game.moy_set.to_s : '&nbsp;'}]" -%></div>
   <%= javascript_tag "
     selected_cards = [];
     possible_sets = #{@game.get_sets.inspect};
