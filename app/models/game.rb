@@ -37,17 +37,20 @@ class Game < ActiveRecord::Base
     self.nb_bad_set = 0
     # nombre de points 
     self.nb_point = 0
+    # partie terminée
+    self.game_over = 0
     extend_if_needed
   end
 
   def extend_if_needed
-    while self.courante < NB_CARTE and self.get_sets.size == 0
+    while (self.nb_set_possible = self.get_sets.size) == 0 and self.courante < NB_CARTE
       self.etendu += 1
       TAILLE_EXT.times do
         self.tapis << self.courante
         self.courante += 1
       end
     end
+    self.game_over = self.nb_set_possible == 0 ? 1 : 0
   end
 
   # cards est un tableau d'index sur tapis
@@ -64,8 +67,9 @@ class Game < ActiveRecord::Base
         self.etendu -= 1
       end
       self.nb_set = self.nb_set.next
-      self.nb_point += is_a_set[1] + (ENV['RAILS_ENV'] == 'test' ? 0 : self.get_time_bonus(try_time - (self.last_set || self.start)))
-      self.moy_set = (try_time - self.start) / self.nb_set
+      self.time_last_set = try_time - (self.last_set || self.start)
+      self.nb_last_point = is_a_set[1] + (ENV['RAILS_ENV'] == 'test' ? 0 : self.get_time_bonus(self.time_last_set))
+      self.nb_point += self.nb_last_point
       self.last_set = try_time
       extend_if_needed
       true

@@ -21,7 +21,10 @@ ActiveRecord::Schema.define(:version => 1) do
     t.integer  "nb_set"
     t.integer  "nb_bad_set"
     t.integer  "nb_point"
-    t.float    "moy_set"
+    t.integer  "nb_last_point"
+    t.float    "time_last_set"
+    t.integer  "game_over"
+    t.integer  "nb_set_possible"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

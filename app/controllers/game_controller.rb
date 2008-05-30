@@ -1,7 +1,7 @@
 class GameController < ApplicationController
   protect_from_forgery :except => :play
   def index
-    @games = Game.find(:all)
+    @games = Game.find(:all, :order => 'start desc')
   end
 
   def new
