@@ -32,9 +32,8 @@ class GameController < ApplicationController
   
   def play
     @game = Game.find(params[:id])
-    if @game.try_set(params[:set].to_a.map{|x|x[1].to_i})
-      @game.save
-    end
+    @game.try_set(params[:set].to_a.map{|x|x[1].to_i})
+    @game.save
     render :file => 'game/play.rjs', :use_full_path => true
   end
 end

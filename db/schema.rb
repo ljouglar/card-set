@@ -16,6 +16,11 @@ ActiveRecord::Schema.define(:version => 1) do
     t.text     "tapis"
     t.integer  "courante"
     t.integer  "etendu"
+    t.datetime "start"
+    t.datetime "last_set"
+    t.integer  "nb_set"
+    t.integer  "nb_bad_set"
+    t.integer  "nb_point"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

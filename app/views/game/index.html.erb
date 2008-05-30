@@ -1,11 +1,18 @@
 <%= link_to "Nouvelle partie", {:action => "create", :method => "post"} -%>
-<table border="1">
+<br/>
+<table border="1" align="center">
   <tr>
-    <th>Tapis</th><th>Courante</th>
+    <th>Tapis</th><th>Courante</th><th>Début</th><th>Dern. set</th><th>Sets</th><th>Ratés</th><th>Score</th>
   </tr>
   <% @games.each do |game| -%>
   <tr>
-    <td><%= game.tapis.map{|c|game.talon[c]}.inspect -%></td><td><%= game.courante.to_s -%></td>
+    <td><%= game.tapis.map{|c|game.talon[c]}.inspect -%></td>
+    <td><%= game.courante.to_s -%></td>
+    <td><%= game.start.to_s(:db) -%></td>
+    <td><%= game.last_set ? game.last_set.to_s(:db) : '&nbsp;' -%></td>
+    <td><%= game.nb_set.to_s -%></td>
+    <td><%= game.nb_bad_set.to_s -%></td>
+    <td><%= game.nb_point.to_s -%></td>
     <td><%= link_to "Suppr", {:action => "remove", :id => game.id}, :method => "post" -%></td>
     <td><%= link_to "Afficher", {:action => "show", :id => game.id} -%></td>
   </tr>
