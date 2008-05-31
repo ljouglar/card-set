@@ -36,24 +36,27 @@ tr.impair {
 #content {
   width: 900px;
   text-align: center;
-  /* background-color: #bbb; */
 }
 
 #tapis {
   float: left;
   width: 400px;
-  /* background-color: #bfb; */
 }
+
+#stats {
+  float: left;
+  width: 300px;
+  height: 300px;
+}
+
 
 #selected_cards {
   display: block;
   width: 400px;
-  /* background-color: #bbf; */
 }
 #possible_sets {
   float: right;
   width: 200px;
-  /* background-color: #fbb; */
 }
 
 .spacer {
@@ -62,6 +65,13 @@ tr.impair {
 
 .div_title {
   width: 100%;
+  font-size: 14px;
+}
+
+.div_text {
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
 }
 
 #possible_set  {float: left; width: 200px; height: 96px;}

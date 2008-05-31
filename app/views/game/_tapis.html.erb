@@ -1,9 +1,5 @@
 <div id="tapis">
-  <div id="tapis_title" class="div_title"><%= "Tapis [courante : #{@game.courante}] [étendu : #{@game.etendu}] [sets #{@game.nb_set}] [ratés : #{@game.nb_bad_set}] [score : #{@game.nb_point}]" -%></div>
-  <div id="tapis_title" class="div_title"><%= "[début : #{@game.start.to_s(:db)}] [dernier set : #{@game.last_set ? @game.last_set.to_s(:db) : '&nbsp;'}]" -%></div>
-  <div id="tapis_title" class="div_title"><%= "[points / temps moyen sur la partie : #{@game.nb_set > 0 ? sprintf('%2.2f', @game.nb_point.to_f / @game.nb_set.to_f) : 0.to_s} / #{@game.last_set ? sprintf('%2.2f', (@game.last_set - @game.start) / @game.nb_set) : '&nbsp;'}]" -%></div>
-  <div id="tapis_title" class="div_title"><%= "[points / temps pour le dernier set : #{@game.nb_last_point ? @game.nb_last_point.to_s : '&nbsp;'} / #{@game.time_last_set ? sprintf('%2.2f', @game.time_last_set) : '&nbsp;'}]" -%></div>
-  <div id="tapis_title" class="div_title"><%= "[set(s) possible(s) : #{@game.nb_set_possible}]" -%></div>
+  <div id="tapis_title" class="div_title"><%= "Tapis <span class=\"div_text\">[courante : #{@game.courante}] [étendu : #{@game.etendu}]</span>" -%></div>
   <% if @game.game_over == 1 -%>
     <div id="tapis_title" class="div_title"><%= "******************* PARTIE TERMINEE *******************" -%></div>
   <% end -%>
@@ -22,3 +18,4 @@
   <% end -%>
   <div class="spacer">&nbsp;</div>
 </div>
+
