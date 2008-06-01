@@ -1,7 +1,7 @@
 <p><%= link_to "Nouvelle partie", {:action => "create", :method => "post"} -%></p>
 <br/>
 <table id="game_list">
-  <tr>
+  <tr class="div_title">
     <th>Début</th><th>Avancement</th><th>Set(s) possible(s)</th><th>Dern. set</th><th>Sets</th><th>Ratés</th><th>Score</th><th>Moyenne points/temps par set</th>
   </tr>
   <% @games.each_with_index do |game, index| -%>

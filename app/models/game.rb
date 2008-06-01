@@ -15,6 +15,8 @@ class Game < ActiveRecord::Base
   # Description de toutes les cartes du jeu, de [0, 0, 0, 0] à [2, 2, 2, 2], soit 81 cartes.
   CARDS = (0..(NB_CARTE-1)).to_a.map{|i|(0..(NB_CARAC-1)).to_a.reverse.map{|p|i/NB_ETAT**p%NB_ETAT}}
 
+  has_many :players
+  
   serialize :talon
   serialize :tapis
   attr_accessor_with_default :selected_cards, []
