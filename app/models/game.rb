@@ -68,7 +68,7 @@ class Game < ActiveRecord::Base
       end
       self.nb_set = self.nb_set.next
       self.time_last_set = try_time - (self.last_set || self.start)
-      self.nb_last_point = is_a_set[1] + (ENV['RAILS_ENV'] == 'test' ? 0 : self.get_time_bonus(self.time_last_set))
+      self.nb_last_point = is_a_set[1] + self.get_time_bonus(self.time_last_set)
       self.nb_point += self.nb_last_point
       self.last_set = try_time
       extend_if_needed
