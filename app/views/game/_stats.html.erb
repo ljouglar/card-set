@@ -1,0 +1,13 @@
+<div id="stats">
+  <div id="tapis_title" class="div_title"><%= "Statistiques" -%></div>
+  <div id="tapis_title" class="div_text">
+    Sets : <%= @game.nb_set -%><br/>
+    Ratés : <%= @game.nb_bad_set -%><br/>
+    Score : <%= @game.nb_point -%><br/>
+    Début : <%= @game.start.to_s(:db) -%><br/>
+    Dernier set : <%= @game.last_set ? @game.last_set.to_s(:db) : '&nbsp;' -%><br/>
+    Moyennes points/temps : <%= @game.nb_set > 0 ? sprintf('%2.2f', @game.nb_point.to_f / @game.nb_set.to_f) : 0.to_s -%> / <%= @game.last_set ? sprintf('%2.2f', (@game.last_set - @game.start) / @game.nb_set) : '&nbsp;' -%><br/>
+    Dernier set points/temps : <%= @game.nb_last_point ? @game.nb_last_point.to_s : '&nbsp;' -%> / <%= @game.time_last_set ? sprintf('%2.2f', @game.time_last_set) : '&nbsp;' -%><br/>
+    Sets possibles : <%= @game.nb_set_possible -%>
+  </div>
+</div>

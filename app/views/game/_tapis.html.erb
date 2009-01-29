@@ -1,5 +1,8 @@
 <div id="tapis">
-  <div id="tapis_title" class="div_title"><%= "Tapis [courante: #{@game.courante}] [étendu: #{@game.etendu}]" -%></div>
+  <div id="tapis_title" class="div_title"><%= "Tapis <span class=\"div_text\">[courante : #{@game.courante}] [étendu : #{@game.etendu}]</span>" -%></div>
+  <% if @game.game_over == 1 -%>
+    <div id="tapis_title" class="div_title"><%= "******************* PARTIE TERMINEE *******************" -%></div>
+  <% end -%>
   <%= javascript_tag "
     selected_cards = [];
     possible_sets = #{@game.get_sets.inspect};
@@ -9,9 +12,10 @@
       <% place_number = c * Game::NB_ETAT + e -%>
       <% card_id = @game.tapis[c * Game::NB_ETAT + e] ? Game::CARDS[@game.talon[@game.tapis[place_number]]].join('') : "none" -%>
       <div id="<%= "tapis_card_#{place_number}" -%>" class="<%= "card_#{card_id}" -%>" 
-        onclick="<%= card_id != 'none' ? "select_tapis_card('#{@game.id}' , #{place_number})" : "" -%>">
+        onclick="<%= card_id != 'none' and @game.game_over == 0 ? "select_tapis_card('#{@game.id}' , #{place_number})" : "" -%>">
       </div>
     <% end -%>
   <% end -%>
   <div class="spacer">&nbsp;</div>
 </div>
+

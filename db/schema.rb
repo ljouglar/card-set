@@ -9,13 +9,35 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 1) do
+ActiveRecord::Schema.define(:version => 2) do
 
   create_table "games", :force => true do |t|
     t.text     "talon"
     t.text     "tapis"
     t.integer  "courante"
     t.integer  "etendu"
+    t.datetime "start"
+    t.datetime "last_set"
+    t.integer  "nb_set"
+    t.integer  "nb_bad_set"
+    t.integer  "nb_point"
+    t.integer  "nb_last_point"
+    t.float    "time_last_set"
+    t.integer  "game_over"
+    t.integer  "nb_set_possible"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "players", :force => true do |t|
+    t.integer  "game_id"
+    t.string   "name"
+    t.datetime "last_set"
+    t.integer  "nb_set"
+    t.integer  "nb_bad_set"
+    t.integer  "nb_point"
+    t.integer  "nb_last_point"
+    t.float    "time_last_set"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,11 +1,19 @@
-<%= link_to "Nouvelle partie", {:action => "create", :method => "post"} -%>
-<table border="1">
-  <tr>
-    <th>Tapis</th><th>Courante</th>
+<p><%= link_to "Nouvelle partie", {:action => "create", :method => "post"} -%></p>
+<br/>
+<table id="game_list">
+  <tr class="div_title">
+    <th>Début</th><th>Avancement</th><th>Set(s) possible(s)</th><th>Dern. set</th><th>Sets</th><th>Ratés</th><th>Score</th><th>Moyenne points/temps par set</th>
   </tr>
-  <% @games.each do |game| -%>
-  <tr>
-    <td><%= game.tapis.map{|c|game.talon[c]}.inspect -%></td><td><%= game.courante.to_s -%></td>
+  <% @games.each_with_index do |game, index| -%>
+  <tr class="<%= index % 2 == 0 ? 'pair' : 'impair' -%>">
+    <td><%= game.start.to_s(:db) -%></td>
+    <td><%= (((game.game_over == 0 ? game.nb_set : 27) / 27.0) * 100).round.to_s + ' %'-%></td>
+    <td><%= game.nb_set_possible.to_s -%></td>
+    <td><%= game.last_set ? game.last_set.to_s(:db) : '&nbsp;' -%></td>
+    <td><%= game.nb_set.to_s -%></td>
+    <td><%= game.nb_bad_set.to_s -%></td>
+    <td><%= game.nb_point.to_s -%></td>
+    <td><%= game.nb_set > 0 ? sprintf('%2.2f', game.nb_point.to_f / game.nb_set.to_f) : '0' -%> / <%= game.last_set ? sprintf('%2.2f', (game.last_set - game.start) / game.nb_set) : '&nbsp;' -%></td>
     <td><%= link_to "Suppr", {:action => "remove", :id => game.id}, :method => "post" -%></td>
     <td><%= link_to "Afficher", {:action => "show", :id => game.id} -%></td>
   </tr>
